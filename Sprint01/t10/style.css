@@ -1,0 +1,21 @@
+.green {
+    color: green;
+}
+.blank:after {
+    color: coral;
+    content: "\21d2";
+}
+.https:before {
+    content: "\00bb";
+    padding-right: 10px;
+}
+.http:before {
+    content: "\00d7";
+    padding-right: 10px;
+    color: red;
+}
+a:hover.ends:after {
+    content: "\2026 last symbol is 'a'";
+    color: coral;
+    font-style: italic;
+}

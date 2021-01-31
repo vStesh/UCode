@@ -1,0 +1,32 @@
+.wrapper {
+    margin: 0 auto;
+    text-align: center;
+}
+.container {
+    display: flex;
+    /*width: 100%;*/
+    flex-wrap: wrap;
+}
+.card {
+    border: 1px solid #cdc9c9;
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    text-align: left;
+}
+@media (min-width: 320px) {
+    .card {
+        width: calc(100% - 42px);
+    }
+}
+@media (min-width: 768px) {
+    .card {
+        width: calc(50% - 42px);
+    }
+}
+@media (min-width: 1024px) {
+    .card {
+        width: calc(25% - 42px);
+    }
+}
