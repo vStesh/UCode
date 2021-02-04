@@ -80,7 +80,7 @@ btn_fav.addEventListener('click', switchFavorite);
 
 
 function getView(item, key) {
-    let view = `<div class="view__left"><div class="view__like" id="f-${key}"><i class="fas fa-heart"></i></div><div class="view__title">${item.title}</div>`;
+    let view = `<div class="view__left"><div class="view__like ${favorite.has(item) ? 'view__like_active' : ''}" id="f-${key}"><i class="fas fa-heart"></i></div><div class="view__title">${item.title}</div>`;
     view += `<div class="view__date">${item.date}</div>`;
     view += `<div class="view__actors">${getActors(item.actors)}</div>`;
     view += `<div class="view__detail">${item.description}</div>`;
@@ -132,15 +132,19 @@ function renderOutputFav(data_key) {
     //console.log(data);
     card_list.innerHTML = '';
     card_viev.innerHTML = '';
-    for (let item of favorite.entries()){
-        console.log(item);
-        card_list.insertAdjacentHTML('beforeEnd', `<div id="${item[0]}" class="card__list_item${(data_key == item) ? ' list_active' : ''}">${item[1].title}</div>`);
-        card_viev.insertAdjacentHTML('beforeEnd', `<div class="card__view_item${(data_key == item) ? ' view_active' : ''}">${getView(item[0])}</div>`);
-    
+    let i = 0;
+    for (let value of favorite.values()){
+        //console.log(item);
+        card_list.insertAdjacentHTML('beforeEnd', `<div id="${i}" class="card__list_item${(data_key == i) ? ' list_active' : ''}">${value.title}</div>`);
+        card_viev.insertAdjacentHTML('beforeEnd', `<div class="card__view_item${(data_key == i) ? ' view_active' : ''}">${getView(value, i)}</div>`);
+        i++;
     };
 
     document.querySelectorAll('.card__list_item').forEach((item, key, arr) => {
         item.addEventListener('click', showItem);
+    });
+    document.querySelectorAll('.view__like').forEach((item, key, arr) => {
+        item.addEventListener('click', addFavorite);
     });
 }
 
@@ -167,10 +171,26 @@ function switchFavorite() {
 }
 
 function addFavorite() {
-    if(favorite.has(data[this.id.slice(2)])) {
-        favorite.delete(data[this.id.slice(2)]);
+    if(show_fav) {
+        let i = 0;
+        for (let value of favorite.values()) {
+            if(i == this.id.slice(2)) {
+                favorite.delete(value);
+            }
+            i++;
+
+        }
+        renderOutputFav(0);
+
+        
     } else {
-        favorite.add(data[this.id.slice(2)]);
+        if(favorite.has(data[this.id.slice(2)])) {
+            favorite.delete(data[this.id.slice(2)]);
+        } else {
+            favorite.add(data[this.id.slice(2)]);
+        }
+        renderOutput(this.id.slice(2));
     }
+    
     console.log(this.id);
 }
