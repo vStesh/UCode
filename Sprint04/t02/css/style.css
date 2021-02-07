@@ -63,7 +63,7 @@
     font-weight: 700;
     transform: rotate(-30deg);
     box-shadow: 0 0 5px 2px rgb(230, 0, 0);
-    display: none;;
+    display: none;
 }
 .sleep-for {
     margin-top: 15px;
@@ -80,8 +80,73 @@
     color: white;
 }
 .sleep {
-    display: none;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: 20px;
+}
+.sleep-info {
+    background-color: tomato;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    flex-wrap: nowrap;
+    width: 200px;
+    margin-top: 10px;
+    font-size: 25px;
+}
+.sleep-up {
+    float: left;
 }
 .sleep-time {
+    float: right;
+}
+.sleep-title {
     display: none;
+}
+.sleep-img {
+    position: absolute;
+    right: -30px;
+    top: -20px;
+    width: 100px;
+    border-radius: 55px;
+}
+.message_top {
+    
+    position: absolute;
+    left: -40px;
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 20px;
+    color: red;
+    font-weight: 700;
+    transform: rotate(-30deg);
+    box-shadow: 0 0 5px 2px rgb(230, 0, 0);
+    z-index: 1000;
+
+}
+.feed {
+    background-color: tomato;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    
+    flex-wrap: nowrap;
+    width: 200px;
+    margin-top: 10px;
+    font-size: 25px;
+}
+.feed-title {
+    display: none;
+}
+.hidden-buttons {
+    display: none;
+}
+.f-title {
+    /* display: none; */
 }
