@@ -1,0 +1,36 @@
+.menu-shaddow {
+	width: 300px;
+	background-color: rgb(196, 164, 122);
+	display: flex;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+.menu {
+	width: 100%;
+	margin: 20px;
+	background-color: rgb(231, 204, 169);
+	box-shadow: 0 0 11px 11px rgb(231, 204, 169);
+	padding: 15px 5px;
+}
+.menu-title {
+	width: 100%;
+	text-align: center;
+	font-family: 'Damion', cursive;
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+.sub {
+	font-family: 'Italianno', cursive;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+.sub-title {
+	font-size: 30px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+	height: 30px;
+}
+.sub-item {
+	display: flex;
+	font-size: 20px;
+	justify-content: space-between;
+}
