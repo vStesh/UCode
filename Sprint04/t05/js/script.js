@@ -1,23 +1,23 @@
 let arr = {
 	'menu': {
 		'salads' : {
-			'greek salad' : '5.99',
-			'caesar salad' : '7.99'
+			'greek salad' : 5.99,
+			'caesar salad' : 7.99
 		},
 		'main dishes' : {
-			'margkerite pizza' : '12.50',
-			'tomato soup' : '6.99',
-			'surger' : '10.00'
+			'margkerite pizza' : 12.50,
+			'tomato soup' : 6.99,
+			'surger' : 10.00
 		},
 		'desserts' : {
-			'cheesscake' : '4.99',
-			'chocolate ise-cream' : '2.50',
-			'fruit saled' : '3.99'
+			'cheesscake' : 4.99,
+			'chocolate ise-cream' : 2.50,
+			'fruit saled' : 3.99
 		},
 		'drinks' : {
-			'lemonade' : '3.20',
-			'green tea' : '1.50',
-			'coffee' : '1.99'
+			'lemonade' : 3.20,
+			'green tea' : 1.50,
+			'coffee' : 1.99
 		}
 	}
 }
@@ -33,7 +33,7 @@ let render = '<div class="menu-title">Menu</div>';
 for(let sub of menu.keys()) {
 	render += `<div class="sub"><div class="sub-title">${sub}</div>`;
 	for(let item of menu.get(sub).entries()) {	
-		render += `<div class="sub-item"><div class="sub-item-title">${item[0]}</div><div class="sub-item-price">$ ${item[1]}</div></div>`;
+		render += `<div class="sub-item"><div class="sub-item-title">${item[0]}</div><div class="sub-item-price">$ ${new Intl.NumberFormat('en-IN', { minimumFractionDigits: 2}).format(item[1])}</div></div>`;
 	}
 	render += '</div>';
 }
