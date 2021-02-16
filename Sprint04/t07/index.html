@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Vladimir Steshenko, Владимир Стешенко, UCode, Sprint04, t06, HTML, CSS, JavaScript, Chat with Bot">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta name="keywords" content="Vladimir Steshenko, Владимир Стешенко, UCode, Sprint04, t06, HTML, CSS, JavaScript, User profile">
 	<meta name="author" content="Vladimir Steshenko, Владимир Стешенко">
-	<meta name="description" content="UCode It Academy. Sprint04, t07 by Vladimir Steshenko, J.A.R.V.I.S. chat with bot">
-    <title>t06. J.A.R.V.I.S.</title>
-    <link rel="stylesheet" href="css/style.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+	<meta name="description" content="UCode It Academy. Sprint04, t07 by Vladimir Steshenko, User profile">
+  <title>User profile</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <div class="display">
-		<div class="display__title">
-			J.A.R.V.I.S.
-		</div>
-		<div class="display__body">
-			<div class="render_area" id="render">
-
-			</div>
-		</div>
-		<div class="display__footer">
-			<input type="text" class="message_area" placeholder="Input Message" id="message_area">
-			<div class="btn-send" onclick="sendMessage()"><div>></div></div>
-		</div>
-	</div>
-	
-
-    <script src="js/script.js"></script>
+<img src="./assets/images/user.png" alt="profile image">
+<h1>Profile</h1>
+<div class="form__group">
+  <label for="name">Full name:</label>
+  <br>
+  <input id="name" type="text" disabled value="Peter Parker">
+  <button onclick="edit(this)" class="btn">edit</button>
+</div>
+<div class="form__group">
+  <label for="age">Age:</label>
+  <br>
+  <input id="age" type="text" disabled value="18">
+  <button onclick="edit(this)" class="btn">edit</button>
+</div>
+<div class="form__group">
+  <label for="email">Email:</label>
+  <br>
+  <input id="email" type="text" disabled value="spidey@gmail.com">
+  <button onclick="edit(this)" class="btn">edit</button>
+</div>
+<script src="js/script.js"></script>
 </body>
+
 </html>

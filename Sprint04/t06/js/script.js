@@ -1,3 +1,4 @@
+'use strict'
 let mess_area = document.querySelector('#message_area');
 let render = document.querySelector('#render');
 let answer = false;
