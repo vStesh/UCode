@@ -49,7 +49,7 @@ images.forEach(image => {
 });
 
 function showMessage() {
-    message.innerHTML = `Загружено изображений: ${quantity}`;
+    message.innerHTML = `Загружено изображений: ${quantity} из ${qImages}`;
     if(quantity === qImages) {
         message.classList.add('message_done');
         setTimeout(() => {
