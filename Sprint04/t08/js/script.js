@@ -1,6 +1,7 @@
 'use strict'
+const qImages = 20;
 
-for(let i = 1; i < 21; i++) {
+for(let i = 1; i < qImages + 1; i++) {
 
     document.querySelector('.wrapper').insertAdjacentHTML('beforeend', 
     `    <div class="lazy-image">
@@ -10,7 +11,9 @@ for(let i = 1; i < 21; i++) {
 
 }
 
+let quantity = 0;
 const images = document.querySelectorAll("[data-src]");
+const message = document.querySelector("#message");
 
 function preloadImage(img) {
     const src = img.getAttribute("data-src");
@@ -18,13 +21,15 @@ function preloadImage(img) {
         return;
     }
 
+    quantity++;
+    showMessage();
     img.src = src;
 }
 
 
 
 const imgOptions = {
-    threshold: 1,
+    threshold: 0.5,
     rootMargin: "0px 0px -100px 0px"
 };
 
@@ -42,3 +47,13 @@ const imgObserver = new IntersectionObserver((entries, imgObserver) => {
 images.forEach(image => {
     imgObserver.observe(image);
 });
+
+function showMessage() {
+    message.innerHTML = `Загружено изображений: ${quantity}`;
+    if(quantity === qImages) {
+        message.classList.add('message_done');
+        setTimeout(() => {
+            message.classList.add("message_out");
+        }, 3000);
+    }
+}

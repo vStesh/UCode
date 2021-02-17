@@ -18,3 +18,20 @@
     margin: 20px auto;
     transition: opacity 250ms ease-in;
 }
+.message {
+    position: fixed;
+    top:20px;
+    right: 100px;
+    border: 1px solid grey;
+    padding: 10px 30px;
+    background-color: red;
+    border-radius: 20px;
+    color: white;
+}
+.message_done {
+    background-color: green;
+}
+.message_out {
+    top: -50px;
+    transition: 1s;
+}
