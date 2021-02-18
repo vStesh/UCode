@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta name="keywords" content="Vladimir Steshenko, Владимир Стешенко, UCode, Sprint04, t10, HTML, CSS, JavaScript, Super-stats">
+	<meta name="author" content="Vladimir Steshenko, Владимир Стешенко">
+	<meta name="description" content="UCode It Academy. Sprint04, t10 by Vladimir Steshenko, Super-stats">
+  <title>t10. Super-stats</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h1>Super-stats</h1>
+    <p>
+      Compare stats of different superheroes.<br/>
+      Find superheroes to compare using search, or click "Random" to select a random superhero.</br>
+      Once you have selected all heroes you want to compare, click "Compare"
+    </p>
+    <div class="row">
+      <input type="text" class="hero-input" id="searchText" autofocus placeholder="search for a superhero">
+      <button class="btn" onclick="searchHero()" default>Search</button>
+      <button class="btn" onclick="searchRandom()">Random</button>
+      <button class="btn" onclick="compareHero()" id="compare">Compare 0</button>
+    </div>
+    <div class="search-result" id="search-result"></div>
+  </div>
+  </div>
+</body>
+</html>
