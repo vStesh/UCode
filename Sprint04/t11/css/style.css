@@ -1,0 +1,33 @@
+.wrapper {
+    /* width: 700px; */
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+.wrapper h1 {
+    width: 100%;
+    /* text-align: center; */
+    
+}
+.container {
+    width: 900px;
+    background-color: gray;
+    padding: 15px;
+}
+#map {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.coordinates {
+    position: absolute;
+    top: 400px;
+    left: 20px;
+    color: white;
+    z-index: 100;
+    background-color: black;
+    padding: 8px;
+    border-radius: 5px;
+}
